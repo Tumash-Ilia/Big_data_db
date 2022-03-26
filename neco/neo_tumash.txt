@@ -1,0 +1,55 @@
+1.
+
+MATCH (node) RETURN (node) LIMIT 10
+
+
+2.
+
+MATCH (movie:Movie) RETURN movie LIMIT 10
+
+3.
+
+MATCH (actor:Person)-[:ACTED_IN]->(movie:Movie) 
+WHERE movie.title = 'The Matrix' 
+RETURN actor ORDER BY actor.name
+
+
+4.
+
+MATCH (actor:Person)-[:ACTED_IN]->(movie:Movie) 
+WHERE actor.name = 'Keanu Reeves' 
+RETURN movie
+
+5.
+
+MATCH (actor:Person)-[:ACTED_IN]->(movie:Movie) 
+WHERE actor.name = 'Keanu Reeves' 
+RETURN COUNT(movie)
+
+
+6.
+
+MATCH (actor1:Person)-[:ACTED_IN]->(movie:Movie)<-[:ACTED_IN]-(actor2:Person) 
+WHERE actor1.name ='Keanu Reeves' and actor2.name = 'Carrie-Anne Moss' 
+RETURN movie
+
+7.
+
+MATCH (:Person)-[role:ACTED_IN]->(:Movie) 
+RETURN AVG(role.earnings)
+
+8.
+
+CREATE (JohnWick:Movie {title:'John Wick'})
+RETURN JohnWick
+MATCH
+   (keanu:Person {name:'Keanu Reeves'}),
+   (johnwick:Movie {title: 'John Wick'}) 
+CREATE (keanu)-[action:ACTED_IN{earnings: 999, roles:['John Wick'}) ']}]->(johnwick)
+RETURN action  
+
+9.
+	
+MATCH (keanu:Person {name: 'Keanu Reeves'})
+SET keanu.nickname = 'Johnny Silverhand'
+RETURN keanu

@@ -1,0 +1,224 @@
+--------- Mapovani ---------
+#1
+PUT /orders-new
+{
+  "mappings": {
+    "properties": {
+      "products": {
+        "properties": {
+          "product_id": {
+            "type": "long"
+          },
+          "price": {
+            "type": "float"
+          },
+          "quantity": {
+            "type": "long"
+          }
+        }
+      },
+      "created_at": {
+        "type": "date"
+      },
+      "seller": {
+        "properties": {
+          "id": {
+            "type": "long"
+          },
+          "name": {
+            "type": "text"
+          }
+        }
+      },
+      "buyer": {
+        "properties": {
+          "id": {
+            "type": "long"
+          },
+          "name": {
+            "type": "text"
+          }
+        }
+      },
+      "status": {
+        "type": "keyword"
+      },
+      "total_price": {
+        "type": "double"
+      }
+    }
+  }
+}
+
+#2
+PUT /orders-new/_doc/1
+{
+  "products": [ 
+  {
+    "product_id": 4,
+    "price": 37,
+    "quantity": 2
+  },
+  {
+    "product_id": 5,
+    "price": 83,
+    "quantity": 1
+  },
+  {
+    "product_id": 13,
+    "price": 34.6,
+    "quantity": 2
+  }
+  ],
+  "created_at": "2021-02-05T21:34:37Z",
+  "seller": {
+    "id": 4324,
+    "name": "Jhon Doe"
+  },
+  "buyer": {
+    "id": 5621,
+    "name": "Lorem Ipsum"
+  },
+  "status": "completed",
+  "total_price": 189.2
+}
+
+
+--------- Agregace ---------
+
+#1
+GET /products/_search
+{
+  "size": 0,
+  "aggs": {
+    "max_price": {
+      "max": {
+        "field": "price"
+      }
+    },
+    "min_price": {
+      "min": {
+        "field": "price"
+      }
+    },
+    "avg_price": {
+      "avg": {
+        "field": "price"
+      }
+    }
+  }
+}
+#2
+GET /products/_search
+{
+  "size": 0,
+  "aggs": {
+    "amount_stats":{
+      "stats":{
+        "field": "sold"
+      }
+    }
+  }
+}
+#2a
+GET /products/_search
+{
+  "query": {
+    "match": {
+      "sold": 499
+    }
+  }
+}
+
+#3 
+GET /products/_search
+{
+  "size": 0,
+  "aggs": {
+    "status_term":{
+      "terms":{
+        "field": "tags"
+        , "order": {
+          "_key": "asc"
+        }
+      }
+    }
+  }
+}
+
+#4
+
+GET /products/_search
+{
+  "size": 0,
+  "aggs": {
+    "status_term": {
+      "terms": {
+        "field": "tags",
+        "order": {
+          "_key": "asc"
+        }
+      },
+      "aggs": {
+        "amount_stats": {
+          "stats": {
+            "field": "price"
+          }
+        }
+      }
+    }
+  }
+}
+
+#5
+
+GET /products/_search
+{
+  "size": 0,
+  "aggs": {
+    "new_filter": {
+      "filters": {
+        "filters": {
+          "Coffe": {
+            "match": {
+              "tags": "Coffee"
+            }
+          },
+          "Cake": {
+            "match": {
+              "tags": "Cake"
+            }
+          }
+        }
+      },
+      "aggs": {
+        "amount_stats": {
+          "stats": {
+            "field": "price"
+          }
+        }
+      }
+    }
+  }
+}
+
+
+--------- Analyzery ---------
+
+POST _analyze
+{
+  "analyzer": "fingerprint",
+  "text": "Yes yes, Gödel said this sentence is consistent and."
+}
+
+POST _analyze
+{
+  "analyzer": "whitespace",
+  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
+}
+
+POST _analyze
+{
+  "analyzer": "simple",
+  "text": "The 2 QUICK Brown-Foxes jumped over the lazy dog's bone."
+}

@@ -1,0 +1,23 @@
+PUT /person
+
+POST /person/_doc/122
+{
+  "name" : "Ilia",
+  "surname": "Tumash"
+  
+}
+
+GET /person/_doc/111
+
+POST /person/_update/111
+{
+  "doc": {
+    "name" : "Ilya"
+  }
+}
+
+GET /person/_search
+
+DELETE /person/_doc/111
+
+DELETE /person

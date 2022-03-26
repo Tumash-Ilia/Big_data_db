@@ -1,0 +1,37 @@
+#1
+CREATE KEYSPACE cass01
+WITH REPLICATION = { 'class': 'SimpleStrategy', 'replication_factor' : 1};
+
+#2 
+a) DESCRIBE KEYSPACES;
+b) USE cass01;
+
+#3
+CREATE TABLE activity ( 
+   id text, 
+   datetime timestamp, 
+   PRIMARY KEY (id, datetime)) 
+WITH CLUSTERING ORDER BY (datetime DESC);
+
+#4 
+a) ALTER TABLE activity
+    ADD event text;
+
+b) DESCRIBE TABLE activity
+
+#5
+
+INSERT INTO activity (id, datetime, event) 
+VALUES ('1', '2021-04-29 13:30:00', 'event1');
+
+#6
+INSERT INTO activity (id, datetime, event) 
+VALUES ('2',toTimestamp(now()), 'event2');
+
+#7
+SELECT * FROM activity;
+
+#8
+TRUNCATE activity;
+DROP TABLE activity;
+DROP KEYSPACE cass01;
