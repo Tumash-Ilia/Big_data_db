@@ -231,7 +231,21 @@ Cassandra
 
 ## Cvíčení 11
 
-[Cvíčení 11](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+1. vložte libovolnou novou zprávu do místnosti 1 od uživatele 3
+2. smažte vámi vloženou zprávu
+
+3. vytvořte materialized view pro tabulku messages, který bude
+obsahovat pouze čas, room id a zprávu
+  - vypište jeden výsledek z vytvořeného view
+
+4. vložte libovolnou zprávu s časovým limitem 10 s, vypište ji
+   - po 10s ji zkuste vypsat znovu
+
+5. vytvořte vlastní funkci, která při výběru dat vrátí navíc příznak, zda
+vybraný text obsahuje nevhodný výraz
+   - vyberte jeden výraz (nemusí být nevhodný) a otestujte
+
+[Cvíčení 11](https://github.com/Tumash-Ilia/Big_data_db/tree/main/Cassandra/cv03)
 
 
 ## Cvíčení 1
