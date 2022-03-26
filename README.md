@@ -189,9 +189,35 @@ Analyzéry
 
 ## Cvíčení 9
 
+Cassandra 
+
+1. vytvořte keyspace cass01
+   - SimpleStrategy, replication factor 1
+
+2. ověřte vytvoření keyspace a následně se do ní přepněte
+3. vytvořte tabulku activity se dvěma sloupci id a datetime
+   - primární klíč je id a datetime, řazení podle datetime sestupně
+4. do tabulky přidejte sloupec event (text) a ověřte, že byl přidán
+5. vložte jeden libovolný záznam
+6. vložte libovolný druhý záznam s aktuální timestamp hodnotou
+   - ne vloženou ručně
+7. vypište vložené záznamy
+8. smažte vytvořené záznamy, tabulku a následně i keyspace
 
 
-[Cvíčení 9](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+[Cvíčení 9](https://github.com/Tumash-Ilia/Big_data_db/blob/main/Cassandra/cv01/cassandra.txt)
+
+
+## Cvíčení 10
+
+
+
+[Cvíčení 10](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+
+
+## Cvíčení 1
+
+[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
 
 
 ## Cvíčení 1
