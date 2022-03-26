@@ -210,14 +210,28 @@ Cassandra
 
 ## Cvíčení 10
 
+1. vytvořte keyspace dc a přepněte se do něj
+   - SimpleStrategy, replication factor 1
+
+2. vytvořte tabulku message db pro data z messages db.csv
+   - vhodně zvolte datové typy, jako primární klíč nastavte room id a time
+
+3. do tabulky message db importujte data z messages db.csv
+4. vypište jednu zprávu
+
+5. vypište 5 posledních zpráv v místnosti 1 odeslaných uživatelem 2
+6. vypište počet zpráv odeslaných uživatelem 2 v místnosti 1
+7. vypište počet zpráv v každé místnosti
+
+8. vypište id všech místností (3 hodnoty)
 
 
-[Cvíčení 10](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+[Cvíčení 10](https://github.com/Tumash-Ilia/Big_data_db/tree/main/Cassandra/cv02)
 
 
-## Cvíčení 1
+## Cvíčení 11
 
-[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+[Cvíčení 11](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
 
 
 ## Cvíčení 1
