@@ -147,7 +147,24 @@ Vyhledávání produktů (index products)
    - vyzkoušejte si postupně vyhledávat,c,co; ...,.coffee“
 
 
-[Cvíčení 7](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+[Cvíčení 7](https://github.com/Tumash-Ilia/Big_data_db/blob/main/Elasticsearch_Kibana/cv02/elastic_first.txt)
+
+## Cvíčení 8
+
+
+
+[Cvíčení 8](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+
+
+## Cvíčení 1
+
+[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+
+
+## Cvíčení 1
+
+[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+
 
 ## Cvíčení 1
 
