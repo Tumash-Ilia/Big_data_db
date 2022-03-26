@@ -151,14 +151,47 @@ Vyhledávání produktů (index products)
 
 ## Cvíčení 8
 
+Mapování
+1. vytvořte mapování pro definici struktury indexu pro objednávky
+   - index nazvěte orders-new
+   - index bude umožňovat objednávky produktů z indexu products
+(viz minulé cvičení)
+   - vymyslete vhodnou strukturu objednávky a vhodné datové typy
+   - není potřeba vymýšlet až hodnot, např. pro zákazníka stačí jméno
+
+2. vložte záznam do vytvořeného indexu
+   - objednávka musí obsahovat kávu a další dva libovolné produkty
+    
+Agregace (nad indexem products)
+
+1. zjistěte maximální, minimální a průměrnou cenu produktů
+   - bez použití stats
+
+2. zjistěte maximální, minimální a průměrný počet prodaných
+produktů
+   - použitím stats
+   - pomocí dalšího dotazu zjistěte, který produkt se prodává nejvíce
+
+3. pro každý tag zjistěte, v kolika dokumentech je obsažen
+
+4. zjistěte cenové statistiky pro jednotlivé tagy (vnořená agregace)
+   - do 3.úlohy přidat stats
+
+5. získejte statistiky pouze pro produkty s tagem Coffee“ a ,Cake' (filter)
+
+Analyzéry
+
+1. vyzkoušejte si 3 analyzéry pomocí POST analyze
 
 
-[Cvíčení 8](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+[Cvíčení 8](https://github.com/Tumash-Ilia/Big_data_db/blob/main/Elasticsearch_Kibana/cv03/elastic_2.txt)
 
 
-## Cvíčení 1
+## Cvíčení 9
 
-[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+
+
+[Cvíčení 9](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
 
 
 ## Cvíčení 1
