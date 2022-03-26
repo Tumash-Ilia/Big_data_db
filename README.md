@@ -248,13 +248,19 @@ vybraný text obsahuje nevhodný výraz
 [Cvíčení 11](https://github.com/Tumash-Ilia/Big_data_db/tree/main/Cassandra/cv03)
 
 
-## Cvíčení 1
+## Cvíčení 12
 
-[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
+1. vypište 10 libovolných uzlů
+2. vypište 10 libovolných filmů
+3. vypište herce, kteří hráli ve filmu TheMatrix, seřaďte je podle jména
+4. vypište filmy, ve kterých hrál Keanu Reeves
+5. vypište počet filmů, ve kterých hrál Keanu Reeves
+6. vypište filmy, ve kterých hrál Keanu Reeves a Carrie-Anne Moss
+7. vypište průměrný výdělek herců
+8. přidejte nový film „John Wick“, ve kterém bude hrát Keanu Reeves
+9. upravte herce Keanu Reeves, přidejte libovolnou vlastnost
 
+[Cvíčení 12](https://github.com/Tumash-Ilia/Big_data_db/blob/main/Neo4j/neo.txt)
 
-## Cvíčení 1
-
-[Cvíčení 1](https://github.com/Tumash-Ilia/Big_data_db/blob/main/python/cv01/task_cv02.py)
 
 
